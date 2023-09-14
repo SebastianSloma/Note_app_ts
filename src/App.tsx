@@ -1,14 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import { NewNoteInput } from './NewNoteInput';
 
 function App() {
   return (
    <>
-   <div>
-    <input type='text' name='note' placeholder='Note'/>
-    <button>Add note</button>
-   </div>
+   <NewNoteInput addNote={alert}/>
    <hr />
    <ul>
     <li>SOME NOTE</li>
