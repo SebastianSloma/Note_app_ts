@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ChangeEvent} from 'react';
 
 interface NewNoteInputProps {
 	addNote(note: string): void;
@@ -7,7 +7,7 @@ interface NewNoteInputProps {
 export const NewNoteInput: React.FC<NewNoteInputProps> = ({ addNote }) => {
 	const [note, setNote] = React.useState('');
 
-	const updateNote = (event: changeEvent<HTMLInputElement>) => {
+	const updateNote = (event:ChangeEvent<HTMLInputElement>) => {
 		setNote(event.target.value);
 	};
 
